@@ -9,10 +9,15 @@ maxNumber = 1e20
 minNumber = 1e-20
 
 
-def fibonacci_of(n):
+def fibonacci_of(n: int):
     if n in {0, 1}:  # Base case
         return n
     return fibonacci_of(n - 1) + fibonacci_of(n - 2)
+
+
+"""
+Verify if the input is in ranges
+"""
 
 
 def verifyNumber(input):
@@ -31,6 +36,11 @@ def verifyNumber(input):
 
     else:
         return input
+
+
+"""
+Verify that the input number is correctly inputed
+"""
 
 
 def input_fibo() -> int:
@@ -69,6 +79,7 @@ def input_fibo() -> int:
     return n
 
 
-res = [fibonacci_of(n) for n in range(input_fibo())]
+input = input_fibo()
+res = [fibonacci_of(n) for n in range(input)]
 print("La suite de fibonacci est:")
 print(*res, sep=", ")
