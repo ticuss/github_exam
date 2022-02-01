@@ -61,3 +61,4 @@ def p():
     )
     d2 = d_two()
     res = X * math.exp(-R * T) * N * (-d2) - S * N(-d1)
+    return res
